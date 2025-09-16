@@ -1,0 +1,144 @@
+<!--
+  Plik: Moja-strona-bez-pieniędzy.html
+  Krótka instrukcja publikacji (wybierz jedną metody):
+
+  1) GitHub Pages (polecane dla prostych stron statycznych)
+     - Załóż darmowe konto na https://github.com
+     - Stwórz nowe repo nazwane dokładnie: username.github.io (zamień username na swoją nazwę)
+     - Wgraj ten plik jako index.html (możesz użyć przycisku "Add file" -> "Upload files")
+     - Wejdź do ustawień repo i włącz GitHub Pages (branch: main, folder: /)
+     - Strona będzie pod adresem: https://username.github.io
+
+  2) Netlify (drag & drop lub z repo)
+     - Załóż darmowe konto na https://app.netlify.com
+     - W sekcji Sites -> Drag & drop wybierz folder z tym plikiem (spakowany lub pojedynczy plik)
+     - Netlify nadaje darmowy subdomenę .netlify.app
+
+  3) Google Sites (bez kodowania)
+     - Wejdź na https://sites.google.com i stwórz nową stronę, kopiuj treść i grafiki.
+
+  4) WordPress.com (darmowy plan z subdomeną wordpress.com)
+
+  Uwaga odnośnie domeny: darmowa, stabilna opcja to subdomena od GitHub/Netlify/WordPress. 
+  Unikaj podejrzanych darmowych TLD (np. z Freenom) jeżeli chcesz długoterminowo profesjonalny wizerunek.
+
+  Ten plik to pełna, responsywna, jednoplikowa strona HTML/CSS (możesz ją edytować w Notatniku lub edytorze kodu).
+-->
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Moja darmowa strona</title>
+  <meta name="description" content="Prosta, darmowa strona statyczna — możesz ją opublikować na GitHub Pages lub Netlify.">
+  <style>
+    :root{--accent:#0b74de;--bg:#f7f8fb;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:1000px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+    main{margin-top:28px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(8,15,30,0.06)}
+    h1{margin:0;font-size:clamp(22px,3.6vw,36px)}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .feature{padding:14px;border-radius:10px;border:1px solid rgba(15,23,42,0.03)}
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    /* responsive */
+    @media(min-width:700px){.hero{grid-template-columns:1fr 360px}}
+    /* small helper */
+    code{background:#f3f4f6;padding:2px 6px;border-radius:6px;font-family:monospace;font-size:0.94em}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">MS</div>
+        <div>
+          <div style="font-weight:800">Moja darmowa strona</div>
+          <div style="font-size:12px;color:var(--muted)">Zbudowana z HTML/CSS — gotowa do publikacji</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">O mnie</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <section class="card">
+          <h1>Cześć — to jest Twoja darmowa strona</h1>
+          <p class="lead">Możesz ją edytować w dowolny sposób: zmienić teksty, dodać zdjęcia, podpiąć własną domenę. Poniżej masz gotowe sekcje — usuń te, których nie potrzebujesz.</p>
+          <div style="margin-top:14px">
+            <a class="btn" href="#contact">Skontaktuj się</a>
+            <a class="btn" style="background:#111;margin-left:10px" href="#projects">Zobacz projekty</a>
+          </div>
+        </section>
+
+        <aside class="card">
+          <strong>Szybkie kroki do publikacji</strong>
+          <ol style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+            <li>Wyślij ten plik na GitHub jako <code>index.html</code>.</li>
+            <li>Włącz GitHub Pages lub wrzuć do Netlify (drag & drop).</li>
+            <li>Ciesz się swoją stroną pod darmową subdomeną.</li>
+          </ol>
+        </aside>
+      </div>
+
+      <section id="about" class="card" style="margin-top:18px">
+        <h2>O mnie</h2>
+        <p class="lead">Tu opisz kilka zdań o sobie: kim jesteś, co robisz i co chcesz osiągnąć. Krótkie, jasne i przyjazne — odwiedzający to docenią.</p>
+      </section>
+
+      <section id="projects" style="margin-top:16px">
+        <div class="grid">
+          <div class="feature card">
+            <h3>Projekt 1</h3>
+            <p style="color:var(--muted)">Krótki opis projektu. Możesz dodać link do repozytorium lub zdjęcie.</p>
+          </div>
+          <div class="feature card">
+            <h3>Projekt 2</h3>
+            <p style="color:var(--muted)">Krótki opis projektu.</p>
+          </div>
+          <div class="feature card">
+            <h3>Umiejętności</h3>
+            <p style="color:var(--muted)">HTML • CSS • JavaScript • ...</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card" style="margin-top:18px">
+        <h2>Kontakt</h2>
+        <p class="lead">Masz pytania? Napisz na <a href="mailto:twoj@email.pl">twoj@email.pl</a> lub użyj formularza poniżej (ten formularz nie działa bez backendu — dla prostoty użyj mailto lub Formspree).</p>
+
+        <!-- Prosty formularz (do działania potrzebuje zewnętrznego endpointu) -->
+        <form onsubmit="alert('Formularz wymaga zewnętrznego serwisu do wysyłki (np. Formspree).');return false;" style="display:grid;gap:8px;max-width:640px">
+          <input placeholder="Twoje imię" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+          <input placeholder="Twój e-mail" required type="email" style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+          <textarea placeholder="Wiadomość" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ef"></textarea>
+          <div>
+            <button class="btn" type="submit">Wyślij</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Twoje imię — Strona zrobiona za darmo</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
